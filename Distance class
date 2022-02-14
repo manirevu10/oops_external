@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class Distance {
+    private:
+        int feet,inches;
+    public:
+        void input() {
+            cout << "Enter feet and inches:";
+            cin >> feet >> inches;
+        }
+        void show() {
+            cout << "The Distance is:";
+            cout << feet << " feet " << inches << " inch\n";
+        }
+        void sum( Distance x , Distance y) {
+            feet = x.feet+y.feet;
+            inches = x.inches + y.inches;
+            feet = feet + inches/12;
+            inches %= 12;
+        }
+};
+int main() {
+    Distance x,y,z;
+    x.input();
+    y.input();
+    z.sum(x,y);
+    z.show();
+}
