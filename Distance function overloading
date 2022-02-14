@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class Distance {
+    private:
+        int feet,inches;
+    public:
+        void set() {
+            cout << "Enter feet and inches:";
+            cin >> feet >> inches;
+        }
+        void show() {
+            cout <<"Distance is " << feet << " feet " << inches << " inch\n";
+        }
+        void sum( Distance x , Distance y) {
+            feet = x.feet+y.feet;
+            inches = x.inches + y.inches;
+            feet = feet + inches/12;
+            inches %= 12;
+        }
+        void sum(Distance *x,Distance *y) {
+            feet = x->feet + y->feet;
+            inches = x->inches + y->inches;
+            feet = feet + inches/12;
+            inches = inches%12;
+        }
+};
+int main() {
+    Distance d1,d2,d3;
+    d1.set();
+    d2.set();
+    d3.sum(d1,d2);
+    d3.show();
+    d3.sum(&d1,&d2);
+    d3.show();
+    return 0;
+}
