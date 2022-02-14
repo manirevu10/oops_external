@@ -1,0 +1,22 @@
+#include <iostream> 
+using namespace std; 
+class A
+{
+    private: 
+        int x; 
+    public:
+        A(int x) {
+            cout << "Enter data member x value:";
+            cin >> this->x;
+            cout << "Local variable x = " << x << endl;
+            cout << "Data member x = " << this->x << endl;
+        }
+};
+int main() {
+    int x ;
+    cout << "Enter local member x value:"; 
+    cin >> x ;
+    A obj(x);
+}
+
+
