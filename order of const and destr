@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class base {
+    public:
+        base() {
+            cout << "Base class constructor is called\n";
+        }
+        ~base() {
+            cout << "Base class destructor is called\n";
+        }
+};
+class derived : public base {
+    public:
+        derived() {
+            cout << "Derived class constructor is called\n";
+        }
+        ~derived() {
+            cout << "Derived class destructor is called\n";
+        }
+};
+int main() {
+    derived obj;
+}
