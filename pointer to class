@@ -1,0 +1,19 @@
+#include <iostream> 
+using namespace std; 
+class area {
+    int l,b;
+    public: 
+        void get() {
+            cout << "Enter length and breadth:";
+            cin >> l >> b;
+        }
+        void print() {
+            cout << "area of rectangle: " << l*b << endl;
+        }
+};
+int main() {
+    area obj;
+    area *ptr = &obj;
+    ptr->get();
+    ptr->print();
+}
