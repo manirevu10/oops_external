@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class num {
+    private:
+        int x;
+    public:
+        num() {}
+        num(int a) {
+            x = a;
+        }
+        void operator =(num obj) {
+            x = obj.x;
+        }
+        void print() {
+            cout << "x value: " << x;
+        }
+};
+int main() {
+    num obj1(10);
+    num obj2;
+    obj2 = obj1;
+    obj2.print();
+}
