@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+template<class T>
+class A {
+    private:
+        T a;
+    public:
+        A() {
+            cout << "Enter a value:";
+            cin >> a;
+            cout << "a value is " << a << endl;
+        }
+};
+int main() {
+    A<int> obj;
+    A<float> obj1;
+    A<char> obj2;
+}
