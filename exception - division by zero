@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a,b;
+    cout << "Enter a and b value:";
+    cin >> a >> b;
+    try {
+        if(b==0) throw b;
+        else cout << "division = " << a/b<< endl;
+    }
+    catch(int x) {
+        cout << x << " can't be denominator\n";
+    }
+}
