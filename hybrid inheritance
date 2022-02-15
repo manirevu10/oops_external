@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class base1 {
+    protected:
+        int a;
+};
+class base2 {
+    protected:
+        int b;
+};
+class derived_base : public base1, public base2 {
+    public:
+        void get() {
+            cout << "Enter a and b value:";
+            cin >> a >> b;
+        }
+};
+class derived : public derived_base {
+    public:
+        void print() {
+            cout << "a = " << a << endl;
+            cout << "b = " << b << endl;
+        }
+};
+int main() {
+    derived obj;
+    obj.get();
+    obj.print();
+}
