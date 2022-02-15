@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+class num {
+    private:
+        int x;
+    public:
+        num() {
+            cout << "Enter x value:";
+            cin >> x;
+        }
+        void operator +(num obj) {
+            cout << "Adding two objects: " << x+obj.x;
+        }
+};
+int main() {
+    num obj1,obj2;
+    obj1+obj2;
+}
